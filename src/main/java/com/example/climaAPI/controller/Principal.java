@@ -1,6 +1,7 @@
 package com.example.climaAPI.controller;
 
 import com.example.climaAPI.model.Clima;
+import com.example.climaAPI.service.ConsumoApi;
 import com.example.climaAPI.service.ConverteDados;
 import com.example.climaAPI.service.consumoApi;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import java.util.Scanner;
 @RestController
 public class Principal {
     Scanner scanner = new Scanner(System.in);
-    private consumoApi consumo = new consumoApi();
+    private ConsumoApi consumo = new ConsumoApi();
     private ConverteDados conversor = new ConverteDados();
     private final String URL_BASE = "https://api.openweathermap.org/data/2.5/weather?q=";
     private final String API_KEY = "&appid=667c9d5e1fd9eccdb4c7fee0a855863e&units=metric&lang=pt_br";
